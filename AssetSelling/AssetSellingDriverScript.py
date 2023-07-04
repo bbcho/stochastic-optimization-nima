@@ -5,6 +5,7 @@ Asset selling driver script
 from collections import namedtuple
 import pandas as pd
 import numpy as np
+# import AssetSellingModel from AssetSellingModel.py
 from AssetSellingModel import AssetSellingModel
 from AssetSellingPolicy import AssetSellingPolicy
 import matplotlib.pyplot as plt

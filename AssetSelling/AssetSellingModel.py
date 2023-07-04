@@ -3,6 +3,7 @@ Asset selling model class
 Adapted from code by Donghun Lee (c) 2018
 
 """
+#%%
 from collections import namedtuple
 import numpy as np
 
@@ -152,3 +153,5 @@ class AssetSellingModel():
         exog_info.update(self.transition_fn(decision, exog_info))
         self.state = self.build_state(exog_info)
 
+
+# %%
