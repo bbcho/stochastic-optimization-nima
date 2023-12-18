@@ -5,7 +5,7 @@ Asset selling policy class
 from collections import namedtuple
 import pandas as pd
 import numpy as np
-from AssetSellingModel import AssetSellingModel
+from AssetSelling.AssetSellingModel import AssetSellingModel
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 from copy import copy
@@ -224,8 +224,7 @@ class AssetSellingPolicy():
             increment_count = len(theta_high_values)
             contributions = np.reshape(contributions, (-1, increment_count))
             contributions=contributions[::-1]
-            
-
+           
 
             print("Ite {}, n {} and plot ({},{})".format(ite,n,n // 2,n % 2))
             if (math.ceil(len(iterations)/2)>1):

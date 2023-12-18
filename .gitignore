@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.optimization/pyvenv.cfg
+.optimization/bin/python
+.optimization/bin/python3
+.optimization/bin/python3.9
