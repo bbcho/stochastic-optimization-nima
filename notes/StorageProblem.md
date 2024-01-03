@@ -1,5 +1,5 @@
 ## Reading Notes
 
-[[/EnergyStorage_I]]
+[[EnergyStorage_I]]
 
 

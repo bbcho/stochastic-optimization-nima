@@ -2,6 +2,8 @@
 Energy storage driver script
 
 """
+import sys
+sys.path.insert(0, '/Users/nimasafaian/Documents/stochastic-optimization/EnergyStorage_I')
 import time
 from collections import namedtuple
 import pandas as pd
@@ -42,8 +44,8 @@ def process_raw_price_data(file,params):
     hist_price = np.array(data_selection['PJM_RT_LMP'].tolist())
     #print(hist_price[0])
 
-    max_price = pd.DataFrame.max(sort_by_price['PJM_RT_LMP'])
-    min_price = pd.DataFrame.min(sort_by_price['PJM_RT_LMP'])
+    max_price = sort_by_price['PJM_RT_LMP'].max()
+    min_price = sort_by_price['PJM_RT_LMP'].min()
     print("Min price {:.2f} and Max price {:.2f}".format(min_price,max_price))
     
 
@@ -59,8 +61,8 @@ def process_raw_price_data(file,params):
     
 
     # discretize change in price and obtain f(p) for each price change
-    max_price_change = pd.DataFrame.max(sort_price_change['Price_Change'])
-    min_price_change = pd.DataFrame.min(sort_price_change['Price_Change'])
+    max_price_change = sort_price_change['Price_Change'].max()
+    min_price_change = sort_price_change['Price_Change'].min()
     print("Min price change {:.2f} and Max price change {:.2f}".format(min_price_change,max_price_change))
     
     
@@ -120,7 +122,7 @@ def process_raw_price_data(file,params):
 if __name__ == "__main__":
     
 
-    file = 'Parameters.xlsx'
+    file = '/Users/nimasafaian/Documents/stochastic-optimization/EnergyStorage_I/Parameters.xlsx'
     seed = 189654913
 
 
