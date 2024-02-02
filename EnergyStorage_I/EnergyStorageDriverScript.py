@@ -168,7 +168,7 @@ if __name__ == "__main__":
                           {'buy': 0, 'hold': 1, 'sell': 0}]
     M = ESM(state_variable, decision_variable, initial_state, params, exog_params,possible_decisions)
     P = EnergyStoragePolicy(M, policy_names)
-
+    
     ##########################################################################
     #GridSearch
     if params['Algorithm']=='GridSearch':
